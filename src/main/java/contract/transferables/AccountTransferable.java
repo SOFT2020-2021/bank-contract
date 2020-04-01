@@ -13,7 +13,7 @@ public class AccountTransferable implements Contract<AccountTransferable>, Seria
     private long balance = 0L;
     private List<TransactionTransferable> transactions = new ArrayList();
 
-    AccountTransferable(String customerCpr, String bankCvr, String number, long balance){
+    public AccountTransferable(String customerCpr, String bankCvr, String number, long balance){
         this.customerCpr = customerCpr;
         this.bankCvr = bankCvr;
         this.number = number;
