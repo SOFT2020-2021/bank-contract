@@ -9,5 +9,4 @@ public interface Contract<T extends Serializable> {
     default String toJSON() throws IOException {
         return new ObjectMapper().writeValueAsString(this);
     }
-
 }

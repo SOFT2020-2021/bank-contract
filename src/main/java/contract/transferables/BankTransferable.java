@@ -5,20 +5,21 @@ import contract.Contract;
 
 public class BankTransferable implements Contract<BankTransferable>, Serializable {
 
-    private String cvr;
+    private int cvr;
     private String name;
 
+    public BankTransferable(){ }
 
-    public BankTransferable(String cvr, String name) {
+    public BankTransferable(int cvr, String name) {
         this.cvr = cvr;
         this.name = name;
     }
 
-    public String getCvr() {
+    public int getCvr() {
         return cvr;
     }
 
-    public void setCvr(String cvr) {
+    public void setCvr(int cvr) {
         this.cvr = cvr;
     }
 

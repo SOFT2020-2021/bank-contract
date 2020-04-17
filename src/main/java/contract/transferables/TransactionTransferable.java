@@ -8,6 +8,8 @@ public class TransactionTransferable implements Contract<TransactionTransferable
     private long amount;
     private long timestamp;
 
+    public TransactionTransferable() {}
+
     public TransactionTransferable(long amount, long timestamp) {
         this.amount = amount;
         this.timestamp = timestamp;
