@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="contract.transferables.TransactionActivityTransferableTest" tests="2" skipped="0" failures="0" errors="0" timestamp="2020-05-05T12:13:27" hostname="jonas" time="0.579">
+  <properties/>
+  <testcase name="getAndSetAmount" classname="contract.transferables.TransactionActivityTransferableTest" time="0.009"/>
+  <testcase name="getTransactionActivityTransferableFromJSON" classname="contract.transferables.TransactionActivityTransferableTest" time="0.567"/>
+  <system-out><![CDATA[{"senderAccountId" : 123, "receiverAccountId" : 102, "amount" : 100}
+]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>

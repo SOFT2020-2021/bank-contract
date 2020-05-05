@@ -31,5 +31,4 @@ public class BankTransferable implements Contract<BankTransferable>, Serializabl
         this.name = name;
     }
 
-
 }
