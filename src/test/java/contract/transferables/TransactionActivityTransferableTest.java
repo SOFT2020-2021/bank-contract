@@ -14,7 +14,7 @@ public class TransactionActivityTransferableTest {
 
     @Before
     public void setup(){
-        tat = new TransactionActivityTransferable(100L,100L, 100L);
+        tat = new TransactionActivityTransferable(100,100, 100);
     }
 
     @After

@@ -1,44 +1,43 @@
 package contract.transferables;
 
 import contract.Contract;
-
 import java.io.Serializable;
 
 public class TransactionActivityTransferable implements Contract<TransactionActivityTransferable>, Serializable {
-
     private long amount;
-    private int senderAccountId;
-    private int receiverAccountId;
+    private long senderAccountId;
+    private long receiverAccountId;
+
+    public TransactionActivityTransferable() {
+    }
 
     public TransactionActivityTransferable(long amount, int senderAccountId, int receiverAccountId) {
         this.amount = amount;
-        this.senderAccountId = senderAccountId;
-        this.receiverAccountId = receiverAccountId;
+        this.senderAccountId = (long)senderAccountId;
+        this.receiverAccountId = (long)receiverAccountId;
     }
 
-    public TransactionActivityTransferable() {};
-
     public long getAmount() {
-        return amount;
+        return this.amount;
     }
 
     public void setAmount(long amount) {
         this.amount = amount;
     }
 
-    public int getSenderAccountId() {
-        return senderAccountId;
+    public long getSenderAccountId() {
+        return this.senderAccountId;
     }
 
-    public void setSenderAccountId(int senderAccountId) {
+    public void setSenderAccountId(long senderAccountId) {
         this.senderAccountId = senderAccountId;
     }
 
-    public int getReceiverAccountId() {
-        return receiverAccountId;
+    public long getReceiverAccountId() {
+        return this.receiverAccountId;
     }
 
-    public void setReceiverAccountId(int receiverAccountId) {
+    public void setReceiverAccountId(long receiverAccountId) {
         this.receiverAccountId = receiverAccountId;
     }
 }

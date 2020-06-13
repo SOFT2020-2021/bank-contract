@@ -1,14 +1,14 @@
 package contract.transferables;
 
-import java.io.Serializable;
 import contract.Contract;
+import java.io.Serializable;
 
 public class CustomerTransferable implements Contract<CustomerTransferable>, Serializable {
-
     private int cpr;
     private String name;
 
-    public CustomerTransferable(){ }
+    public CustomerTransferable() {
+    }
 
     public CustomerTransferable(int cpr, String name) {
         this.cpr = cpr;
@@ -16,7 +16,7 @@ public class CustomerTransferable implements Contract<CustomerTransferable>, Ser
     }
 
     public int getCpr() {
-        return cpr;
+        return this.cpr;
     }
 
     public void setCpr(int cpr) {
@@ -24,11 +24,10 @@ public class CustomerTransferable implements Contract<CustomerTransferable>, Ser
     }
 
     public String getName() {
-        return name;
+        return this.name;
     }
 
     public void setName(String name) {
         this.name = name;
     }
-
 }

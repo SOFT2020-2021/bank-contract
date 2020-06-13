@@ -1,21 +1,21 @@
 package contract.transferables;
 
+import contract.Contract;
 import java.io.Serializable;
 import java.util.ArrayList;
 import java.util.List;
-import contract.Contract;
 
 public class AccountTransferable implements Contract<AccountTransferable>, Serializable {
-
     private int bankCvr;
     private int customerCpr;
     private int number;
     private long balance = 0L;
     private List<TransactionTransferable> transactions = new ArrayList();
 
-    public AccountTransferable(){ }
+    public AccountTransferable() {
+    }
 
-    public AccountTransferable(int customerCpr, int bankCvr, int number, long balance){
+    public AccountTransferable(int customerCpr, int bankCvr, int number, long balance) {
         this.customerCpr = customerCpr;
         this.bankCvr = bankCvr;
         this.number = number;
@@ -23,7 +23,7 @@ public class AccountTransferable implements Contract<AccountTransferable>, Seria
     }
 
     public int getBankCvr() {
-        return bankCvr;
+        return this.bankCvr;
     }
 
     public void setBankCvr(int bankCvr) {
@@ -31,7 +31,7 @@ public class AccountTransferable implements Contract<AccountTransferable>, Seria
     }
 
     public int getCustomerCpr() {
-        return customerCpr;
+        return this.customerCpr;
     }
 
     public void setCustomerCpr(int customerCpr) {
@@ -39,7 +39,7 @@ public class AccountTransferable implements Contract<AccountTransferable>, Seria
     }
 
     public int getNumber() {
-        return number;
+        return this.number;
     }
 
     public void setNumber(int number) {
@@ -47,7 +47,7 @@ public class AccountTransferable implements Contract<AccountTransferable>, Seria
     }
 
     public long getBalance() {
-        return balance;
+        return this.balance;
     }
 
     public void setBalance(long balance) {
@@ -55,7 +55,7 @@ public class AccountTransferable implements Contract<AccountTransferable>, Seria
     }
 
     public List<TransactionTransferable> getTransactions() {
-        return transactions;
+        return this.transactions;
     }
 
     public void setTransactions(List<TransactionTransferable> transactions) {

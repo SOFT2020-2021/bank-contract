@@ -1,14 +1,14 @@
 package contract.transferables;
 
-import java.io.Serializable;
 import contract.Contract;
+import java.io.Serializable;
 
 public class TransactionTransferable implements Contract<TransactionTransferable>, Serializable {
-
     private long amount;
     private long timestamp;
 
-    public TransactionTransferable() {}
+    public TransactionTransferable() {
+    }
 
     public TransactionTransferable(long amount, long timestamp) {
         this.amount = amount;
@@ -16,19 +16,18 @@ public class TransactionTransferable implements Contract<TransactionTransferable
     }
 
     public long getAmount() {
-        return amount;
+        return this.amount;
     }
 
-    public void setAmount(long amount){
+    public void setAmount(long amount) {
         this.amount = amount;
     }
 
     public long getTimestamp() {
-        return timestamp;
+        return this.timestamp;
     }
 
     public void setTimestamp(long timestamp) {
         this.timestamp = timestamp;
     }
-
 }

@@ -1,12 +1,10 @@
 package contract.transferables;
 
 import contract.Contract;
-
 import java.io.Serializable;
 import java.util.List;
 
 public class CustomerWithAccountsTransferable implements Contract<CustomerWithAccountsTransferable>, Serializable {
-
     private String cpr;
     private List<SimpleAccountTransferable> accounts;
 
@@ -16,7 +14,7 @@ public class CustomerWithAccountsTransferable implements Contract<CustomerWithAc
     }
 
     public String getCpr() {
-        return cpr;
+        return this.cpr;
     }
 
     public void setCpr(String cpr) {
@@ -24,7 +22,7 @@ public class CustomerWithAccountsTransferable implements Contract<CustomerWithAc
     }
 
     public List<SimpleAccountTransferable> getAccounts() {
-        return accounts;
+        return this.accounts;
     }
 
     public void setAccounts(List<SimpleAccountTransferable> accounts) {

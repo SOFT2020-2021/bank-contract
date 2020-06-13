@@ -10,7 +10,7 @@ public class SimpleAccountTransferable {
     }
 
     public int getBalance() {
-        return balance;
+        return this.balance;
     }
 
     public void setBalance(int balance) {
@@ -18,7 +18,7 @@ public class SimpleAccountTransferable {
     }
 
     public int getId() {
-        return id;
+        return this.id;
     }
 
     public void setId(int id) {
