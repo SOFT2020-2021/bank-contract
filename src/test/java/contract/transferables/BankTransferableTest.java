@@ -11,7 +11,7 @@ public class BankTransferableTest {
 
     @Before
     public void setup(){
-        bt = new BankTransferable(100,"testBank");
+        bt = new BankTransferable("100","testBank");
     }
 
     @After
@@ -21,9 +21,9 @@ public class BankTransferableTest {
 
     @Test
     public void getAndSetCvr() {
-        Assert.assertEquals(100, bt.getCvr());
-        bt.setCvr(101);
-        Assert.assertEquals(101, bt.getCvr());
+        Assert.assertEquals("100", bt.getCvr());
+        bt.setCvr("101");
+        Assert.assertEquals("101", bt.getCvr());
     }
 
     @Test

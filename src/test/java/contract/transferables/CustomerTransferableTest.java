@@ -7,11 +7,11 @@ import org.junit.Test;
 
 public class CustomerTransferableTest {
 
-    CustomerTransferable ct;
+    UserTransferable ct;
 
     @Before
     public void setup(){
-        ct = new CustomerTransferable(201287, "Alex");
+        ct = new UserTransferable("201287", "Alex");
     }
 
     @After
@@ -21,9 +21,9 @@ public class CustomerTransferableTest {
 
     @Test
     public void getAndSetCpr() {
-        Assert.assertEquals(201287, ct.getCpr());
-        ct.setCpr(201020);
-        Assert.assertEquals(201020, ct.getCpr());
+        Assert.assertEquals("201287", ct.getCpr());
+        ct.setCpr("201020");
+        Assert.assertEquals("201020", ct.getCpr());
     }
 
     @Test

@@ -1,11 +1,8 @@
 package contract;
 
 import com.fasterxml.jackson.databind.ObjectMapper;
-import contract.transferables.AccountTransferable;
-import contract.transferables.BankTransferable;
-import contract.transferables.CustomerTransferable;
-import contract.transferables.TransactionActivityTransferable;
-import contract.transferables.TransactionTransferable;
+import contract.transferables.*;
+
 import java.io.IOException;
 
 public class JSON {
@@ -20,8 +17,8 @@ public class JSON {
         return (BankTransferable)(new ObjectMapper()).readValue(JSONString, BankTransferable.class);
     }
 
-    public CustomerTransferable fromJsonCustomer(String JSONString) throws IOException {
-        return (CustomerTransferable)(new ObjectMapper()).readValue(JSONString, CustomerTransferable.class);
+    public UserTransferable fromJsonUser(String JSONString) throws IOException {
+        return (UserTransferable)(new ObjectMapper()).readValue(JSONString, UserTransferable.class);
     }
 
     public TransactionTransferable fromJsonTransaction(String JSONString) throws IOException {

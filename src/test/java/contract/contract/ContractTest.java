@@ -2,7 +2,6 @@ package contract.contract;
 
 import contract.Contract;
 import contract.transferables.*;
-import org.junit.After;
 import org.junit.Assert;
 import org.junit.Before;
 import org.junit.Test;
@@ -16,10 +15,10 @@ public class ContractTest {
 
     Contract<AccountTransferable> aContract;
     Contract<BankTransferable> bContract;
-    Contract<CustomerTransferable> cContract;
+    Contract<UserTransferable> cContract;
     Contract<TransactionTransferable> tContract;
-    Contract<CustomerIdsTransferable> ciContract;
-    Contract<CustomerWithAccountsTransferable> cwatContract;
+    Contract<UserIdsTransferable> ciContract;
+    Contract<UserWithAccountsTransferable> cwatContract;
     JSON jsonTransformer;
 
 
@@ -32,11 +31,11 @@ public class ContractTest {
         accounts.add(new SimpleAccountTransferable(211231231, 123));
         accounts.add(new SimpleAccountTransferable(215676231, 23325675));
 
-        cwatContract = new CustomerWithAccountsTransferable("123123", accounts);
+        cwatContract = new UserWithAccountsTransferable("123123", accounts);
 
-        aContract = new AccountTransferable(1234,4321, 112,10000L);
-        bContract = new BankTransferable(1234, "myBank");
-        cContract = new CustomerTransferable(1234, "myCustomer");
+        aContract = new AccountTransferable("1234","4321", "112",10000L);
+        bContract = new BankTransferable("1234", "myBank");
+        cContract = new UserTransferable("1234", "myCustomer");
         tContract = new TransactionTransferable(10000, 12341342);
 
         List<String> customerIds = new ArrayList();
@@ -44,7 +43,7 @@ public class ContractTest {
         customerIds.add("3232");
         customerIds.add("111341324242");
 
-        ciContract = new CustomerIdsTransferable(customerIds);
+        ciContract = new UserIdsTransferable(customerIds);
 
     }
 
@@ -68,12 +67,12 @@ public class ContractTest {
 
         AccountTransferable at = jsonTransformer.fromJsonAccount(jsonStringAccount);
         BankTransferable bt = jsonTransformer.fromJsonBank(jsonStringBank);
-        CustomerTransferable ct = jsonTransformer.fromJsonCustomer(jsonStringCustomer);
+        UserTransferable ct = jsonTransformer.fromJsonUser(jsonStringCustomer);
         TransactionTransferable tt = jsonTransformer.fromJsonTransaction(jsonStringTransaction);
 
         Assert.assertEquals(AccountTransferable.class, at.getClass());
         Assert.assertEquals(BankTransferable.class, bt.getClass());
-        Assert.assertEquals(CustomerTransferable.class, ct.getClass());
+        Assert.assertEquals(UserTransferable.class, ct.getClass());
         Assert.assertEquals(TransactionTransferable.class, tt.getClass());
 
     }

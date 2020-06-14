@@ -3,23 +3,23 @@ package contract.transferables;
 import contract.Contract;
 import java.io.Serializable;
 
-public class CustomerTransferable implements Contract<CustomerTransferable>, Serializable {
-    private int cpr;
+public class UserTransferable implements Contract<UserTransferable>, Serializable {
+    private String cpr;
     private String name;
 
-    public CustomerTransferable() {
+    public UserTransferable() {
     }
 
-    public CustomerTransferable(int cpr, String name) {
+    public UserTransferable(String cpr, String name) {
         this.cpr = cpr;
         this.name = name;
     }
 
-    public int getCpr() {
+    public String getCpr() {
         return this.cpr;
     }
 
-    public void setCpr(int cpr) {
+    public void setCpr(String cpr) {
         this.cpr = cpr;
     }
 

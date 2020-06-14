@@ -6,43 +6,43 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class AccountTransferable implements Contract<AccountTransferable>, Serializable {
-    private int bankCvr;
-    private int customerCpr;
-    private int number;
+    private String bankCvr;
+    private String customerCpr;
+    private String number;
     private long balance = 0L;
     private List<TransactionTransferable> transactions = new ArrayList();
 
     public AccountTransferable() {
     }
 
-    public AccountTransferable(int customerCpr, int bankCvr, int number, long balance) {
+    public AccountTransferable(String customerCpr, String bankCvr, String number, long balance) {
         this.customerCpr = customerCpr;
         this.bankCvr = bankCvr;
         this.number = number;
         this.balance = balance;
     }
 
-    public int getBankCvr() {
+    public String getBankCvr() {
         return this.bankCvr;
     }
 
-    public void setBankCvr(int bankCvr) {
+    public void setBankCvr(String bankCvr) {
         this.bankCvr = bankCvr;
     }
 
-    public int getCustomerCpr() {
+    public String getCustomerCpr() {
         return this.customerCpr;
     }
 
-    public void setCustomerCpr(int customerCpr) {
+    public void setCustomerCpr(String customerCpr) {
         this.customerCpr = customerCpr;
     }
 
-    public int getNumber() {
+    public String getNumber() {
         return this.number;
     }
 
-    public void setNumber(int number) {
+    public void setNumber(String number) {
         this.number = number;
     }
 

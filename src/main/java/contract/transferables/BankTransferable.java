@@ -4,22 +4,22 @@ import contract.Contract;
 import java.io.Serializable;
 
 public class BankTransferable implements Contract<BankTransferable>, Serializable {
-    private int cvr;
+    private String cvr;
     private String name;
 
     public BankTransferable() {
     }
 
-    public BankTransferable(int cvr, String name) {
+    public BankTransferable(String cvr, String name) {
         this.cvr = cvr;
         this.name = name;
     }
 
-    public int getCvr() {
+    public String getCvr() {
         return this.cvr;
     }
 
-    public void setCvr(int cvr) {
+    public void setCvr(String cvr) {
         this.cvr = cvr;
     }
 

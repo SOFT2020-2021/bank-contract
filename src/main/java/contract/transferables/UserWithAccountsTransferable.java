@@ -4,11 +4,11 @@ import contract.Contract;
 import java.io.Serializable;
 import java.util.List;
 
-public class CustomerWithAccountsTransferable implements Contract<CustomerWithAccountsTransferable>, Serializable {
+public class UserWithAccountsTransferable implements Contract<UserWithAccountsTransferable>, Serializable {
     private String cpr;
     private List<SimpleAccountTransferable> accounts;
 
-    public CustomerWithAccountsTransferable(String cpr, List<SimpleAccountTransferable> accounts) {
+    public UserWithAccountsTransferable(String cpr, List<SimpleAccountTransferable> accounts) {
         this.cpr = cpr;
         this.accounts = accounts;
     }

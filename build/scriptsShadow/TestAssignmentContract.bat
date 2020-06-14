@@ -63,7 +63,7 @@ set CMD_LINE_ARGS=%*
 :execute
 @rem Setup the command line
 
-set CLASSPATH=%APP_HOME%\lib\TestAssignmentContract-1.0-SNAPSHOT-all.jar
+set CLASSPATH=%APP_HOME%\lib\TestAssignmentContract-1.5-SNAPSHOT-all.jar
 
 @rem Execute TestAssignmentContract
 "%JAVA_EXE%" %DEFAULT_JVM_OPTS% %JAVA_OPTS% %TEST_ASSIGNMENT_CONTRACT_OPTS%  -jar "%CLASSPATH%" %CMD_LINE_ARGS%

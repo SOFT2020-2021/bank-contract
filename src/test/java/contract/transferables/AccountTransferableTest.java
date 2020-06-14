@@ -13,7 +13,7 @@ public class AccountTransferableTest {
 
     @Before
     public void setup(){
-        at = new AccountTransferable(1234,4321, 112,10000L);
+        at = new AccountTransferable("1234","4321", "112",10000L);
     }
 
     @After
@@ -23,23 +23,23 @@ public class AccountTransferableTest {
 
     @Test
     public void getAndSetBankCvr() {
-        Assert.assertEquals(4321,at.getBankCvr());
-        at.setBankCvr(1000);
-        Assert.assertEquals(1000,at.getBankCvr());
+        Assert.assertEquals("4321",at.getBankCvr());
+        at.setBankCvr("1000");
+        Assert.assertEquals("1000",at.getBankCvr());
     }
 
     @Test
     public void getAndSetCustomerCpr() {
-        Assert.assertEquals(1234,at.getCustomerCpr());
-        at.setCustomerCpr(1000);
-        Assert.assertEquals(1000,at.getCustomerCpr());
+        Assert.assertEquals("1234",at.getCustomerCpr());
+        at.setCustomerCpr("1000");
+        Assert.assertEquals("1000",at.getCustomerCpr());
     }
 
     @Test
     public void getAndSetNumber() {
-        Assert.assertEquals(112, at.getNumber());
-        at.setNumber(1);
-        Assert.assertEquals(1, at.getNumber());
+        Assert.assertEquals("112", at.getNumber());
+        at.setNumber("1");
+        Assert.assertEquals("1", at.getNumber());
     }
 
     @Test
